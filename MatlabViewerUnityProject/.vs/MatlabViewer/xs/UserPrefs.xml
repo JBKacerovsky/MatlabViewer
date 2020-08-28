@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{A0D6AEF9-03A8-5084-DAF4-01C063347268}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MatlabReaderScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MatlabReaderScript.cs" Line="193" Column="1" />
+      <File FileName="Assets/Scripts/PanelResize.cs" />
+      <File FileName="Assets/Scripts/DropDownTest.cs" Line="31" Column="85" />
+      <File FileName="Library/PackageCache/com.unity.render-pipelines.high-definition@8.2.0/Editor/AssetProcessors/MaterialPostProcessor.cs" Line="122" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c41e2615-de4b-4747-9d22-8970c17ead0c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
