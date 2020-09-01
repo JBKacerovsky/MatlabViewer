@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A0D6AEF9-03A8-5084-DAF4-01C063347268}</ProjectGuid>
+    <ProjectGuid>{04AA0A81-A556-0C5C-AA94-D6C15F51F8C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,11 +62,11 @@
     <Compile Include="Assets/Scripts/LightOrbit.cs" />
     <Compile Include="Assets/Scripts/PanelResize.cs" />
     <Compile Include="Assets/Scripts/ToggleActive.cs" />
+    <Compile Include="Assets/Scripts/DropDownTest.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/MultiKeyDictionary.cs" />
     <Compile Include="Assets/Scripts/MatlabReaderScript.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Test/Rotate.cs" />
     <Compile Include="Assets/Scripts/CamOrbit.cs" />
-    <Compile Include="Assets/Scripts/DropDownTest.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />

@@ -1,0 +1,9 @@
+function XfigureClear(varargin)
+path = fileparts(mfilename('fullpath'));
+
+xfigFiles = string(ls('*.mat')); 
+
+for i = 
+action = strcat("!open ", path, '/MatLabViewer.app');
+
+eval(action);
