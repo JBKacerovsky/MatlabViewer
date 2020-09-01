@@ -18,7 +18,7 @@ function XfigureExport(figureTitle, DisplayFigure)
     elseif isunix
         path = strcat(path, '/MatLabViewer_Linux/MatLabViewer_Linux_Data/StreamingAssets/', figureTitle);
     elseif ispc
-        path = strcat(path, '/MatLabViewer.app/Contents/Resources/Data/StreamingAssets/', figureTitle);
+        path = strcat(path, '\MatLabViewer_Windows\MatlabViewer_Data\StreamingAssets\', figureTitle);
     else
         fprintf("save path not defined for this OS\n");
     end

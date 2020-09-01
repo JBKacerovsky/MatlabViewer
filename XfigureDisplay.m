@@ -8,5 +8,5 @@ elseif isunix
     action = strcat("!open ", path, '/MatLabViewer_Linux/MatLabViewer_Linux.x86_64');
     eval(action);
 elseif ispc
-    system(strcat(path, '\MatLabViewer_Mac.app'));
+    system(strcat(path, '\MatLabViewer_Windows\MatlabViewer.exe'));
 end

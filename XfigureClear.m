@@ -5,7 +5,7 @@ function XfigureClear(varargin)
     elseif isunix
         path = strcat(path, '/MatLabViewer_Linux/MatLabViewer_Linux_Data/StreamingAssets/');
     elseif ispc
-        path = strcat(path, '/MatLabViewer.app/Contents/Resources/Data/StreamingAssets/');
+        path = strcat(path, '\MatLabViewer_Windows\MatlabViewer_Data\StreamingAssets\');
     else
 
         fprintf("save path not defined for this OS\n");
