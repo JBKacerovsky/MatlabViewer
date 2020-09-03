@@ -1,6 +1,8 @@
 # Xfigure - Interactive 3D viewer for Matlab meshes/3D scatterplots and graphs built with Unity3d
 
-The functions in this colleection can be used to add FV mesh structs, 3D scatterplots and 2D xy plot data to a a cell array called xFigureObject. xFigureObject can then be viewd in an external interactive 3D viewer app (creatively called "MatlabViewer"), which is released with this collection. 
+[![View Xfigure - Interactive 3D viewer on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/79867-xfigure-interactive-3d-viewer)
+
+The functions in this collection can be used to add FV mesh structs, 3D scatterplots and 2D xy plot data to a a cell array called xFigureObject. xFigureObject can then be viewd in an external interactive 3D viewer app (creatively called "MatlabViewer"), which is released with this collection. 
 
 The goal of this app + functions is to make it easier/faster to explore 3D meshes. The app, which was built using the game design platform Unity3D, allows the user to navigate around the exported meshes faster and with higher quality surface rendering than is generally possible using matlab figures (especially for larger meshes), using the Unity Game engine.
 Meshes can be rendered with a single, solid colour or using values of a surface function (+colormap) to define vertex colors (similar to 'facevertexcdata'). A set of multiple surface functions/vertex colors can be defined for a mesh. A slider in the app can be used to rapidly switch between veertexcolor datasets to explore different surface data on the same mesh in 3D. 
