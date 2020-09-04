@@ -65,9 +65,9 @@ function XfigurePatch(fv, vertexcolors, map, facealpha)
         facealpha = facealpha + 0.0001;
     end
         
-    temp = fv.faces;
-    fv.faces(:, 1) = temp(:, 2); 
-    fv.faces(:, 2) = temp(:, 1); 
+%     temp = fv.faces;
+%     fv.faces(:, 1) = temp(:, 2); 
+%     fv.faces(:, 2) = temp(:, 1); 
     
     xPatch.vertices = intCheck(fv.vertices);
     xPatch.faces = uint32(fv.faces)-1; 
