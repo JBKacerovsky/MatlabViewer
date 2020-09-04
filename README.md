@@ -15,7 +15,7 @@ At the moment the Unity built Matlabviewer and the export functions are still so
 I tested the current version on MacOS 10.14 with Matlab 2019b and it runs smoothly. I tried to build it so it should also run on Linux and Windows, but have not been able to test it yet. Feedback on OS related issues/bugs would be appreciated. 
 
 The source files for the MatlabViewer Unity Project are located in a seperate git repository:
-https://github.com/JBKacerovsky/MatlabViewerUintyProject
+https://github.com/JBKacerovsky/MatlabViewerUnityProject
 
 <h2> General Usage Overview – exporting from Matlab</h2>
 
