@@ -1,4 +1,3 @@
-
 %% build example objects
 % the test objects in this file are built using functions in: 
 % J. Benjamin Kacerovsky (2020). Build mesh or voxel spheres, ellipsoids, and test objects 
