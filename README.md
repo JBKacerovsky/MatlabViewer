@@ -12,7 +12,18 @@ In addition to meshes the app can display 3D scatter-plots (as spheres of user d
 
 At the moment the Unity built Matlabviewer and the export functions are still somewhat experimental and under development. I bulilt them for specific use cases in an ongoing project and even though I tried to generalize them where I could, they may therefore not be well suited for some other tasks. Since this is still very much a work in progress I woud appreciate any feedback you might have (by email or as comments). If this viewer proves useful to other users I would be happy to keep improving and extending it to include other needed capabilities. 
 
-I tested the current version on MacOS 10.14 with Matlab 2019b and it runs smoothly. I tried to build it so it should also run on Linux and Windows, but have not been able to test it yet. Feedback on OS related issues/bugs would be appreciated. 
+I tested the current version on MacOS 10.14 with Matlab 2019b and it runs smoothly. I tried to build it so it should also run on Linux and Windows, but have not been able to test it yet. Feedback on OS related issues/bugs would be appreciated.
+
+## !!! Note concerning face orientation !!!
+
+The display of mesh faces is dependent on the orientation of the face normal. Since matlab follows the right-hand rule, but unity uses left handed coordinates this can cause issues (there is a step in the export function that switches the handedness, but if the face ordering is not as expected issues might still arise. In an earlier version XfigurePatch.m did not have this so it would need to be fixed manually). If the face normal is inverted (i.e. a normal vector following the left hand rule does not point "outwards") the mesh can display "inside out" (only the inside face of the mesh will be visible). If this occurs it can be fixed by simply switching 2 columns in fv.faces. Meshes that have a mixed orientation of face normals will not display correctly.  
+
+```
+    temp = fv.faces;
+    fv.faces(:, 1) = temp(:, 2); 
+    fv.faces(:, 2) = temp(:, 1); 
+```
+
 
 The source files for the MatlabViewer Unity Project are located in a seperate git repository:
 https://github.com/JBKacerovsky/MatlabViewerUnityProject
