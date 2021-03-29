@@ -79,9 +79,9 @@ function XfigurePatch(fv, vertexcolors, map, facealpha)
     xPatch.opacity = facealpha;
     
     if size(vertexcolors, 2) == 1
-        xPatch.type.VertexColorMesh = []; % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
+        xPatch.type.VertexColorMesh = []; % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to 
     else
-        xPatch.type.MultiVertexColorMesh = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
+        xPatch.type.MultiVertexColorMesh = []; 
     end
     
     xFigureObject = evalin('base', "xFigureObject"); 

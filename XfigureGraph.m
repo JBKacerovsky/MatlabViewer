@@ -49,7 +49,7 @@ function XfigureGraph(y, color, x)
     Xgraph.y = y; 
     Xgraph.x = x; 
     Xgraph.color = color; 
-    Xgraph.type = int32(4);
+    Xgraph.type.Graph = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
     % add Xgraph to xFigureObject
     xFigureObject = evalin('base', "xFigureObject"); 
     xFigureObject{end+1} = Xgraph; 

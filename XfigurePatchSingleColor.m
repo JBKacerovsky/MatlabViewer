@@ -49,7 +49,7 @@ function XfigurePatchSingleColor(fv, color, facealpha)
     xPatch.color = intCheck(color); 
     xPatch.opacity = facealpha;
     
-    xPatch.type = uint32(5); 
+    xPatch.type.SingleColorMesh = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
     
     xFigureObject = evalin('base', "xFigureObject"); 
     xFigureObject{end+1} = xPatch; 
