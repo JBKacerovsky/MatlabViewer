@@ -1,4 +1,4 @@
-function XfigureScatter3(scatterPoints, sphereSize, color)
+function XfigureScatter3(scatterPoints, sphereSize, color, shootability, id)
 % XfigureScatter3 - adds 3D scatterplot points to the xFigureObject in the
 % current workspace
 % points will be displayed as spheres at the specified locations
@@ -38,10 +38,15 @@ function XfigureScatter3(scatterPoints, sphereSize, color)
 % Author: J. Benjamin Kacerovsky
 % Centre for Research in Neuroscience, McGill University
 % email: johannes.kacerovsky@mail.mcgill.ca
-% Created: 02-Sep-2020 ; Last revision: 02-Sep-2020 
+% Created: 02-Sep-2020 ; Last revision: 05-Apr-2021 
 
 % ------------- BEGIN CODE --------------
-
+    if nargin < 5
+        id = zeros(1, size(scatterPoints, 2)); 
+    end
+    if nargin < 4
+        shootability = twos(1, size(scatterPoints, 2)); 
+    end
     if nargin < 3
         color = [0.99999, 0, 0]; 
     end
@@ -63,6 +68,8 @@ function XfigureScatter3(scatterPoints, sphereSize, color)
     xScatter3.vertices = intCheck(scatterPoints); 
     xScatter3.size = uint32(sphereSize); 
     xScatter3.color = intCheck(color); 
+    xScatter3.shootability = uint32(shootability); 
+    xScatter3.id = uint32(id);
     xScatter3.type.Scatter3D = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
     xFigureObject = evalin('base', "xFigureObject"); 
     xFigureObject{end+1} = xScatter3; 

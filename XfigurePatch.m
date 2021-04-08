@@ -1,4 +1,4 @@
-function XfigurePatch(fv, vertexcolors, map, facealpha)
+function XfigurePatch(fv, vertexcolors, map, facealpha, shootability, id)
 % XfigurePatch - adds a mesh object with defined vertex colors to the
 % xFigureObject int the current workspace
 % variable vertex colors allow for scroling through vertexcolor data
@@ -49,11 +49,17 @@ function XfigurePatch(fv, vertexcolors, map, facealpha)
 % Author: J. Benjamin Kacerovsky
 % Centre for Research in Neuroscience, McGill University
 % email: johannes.kacerovsky@mail.mcgill.ca
-% Created: 02-Sep-2020 ; Last revision: 02-Sep-2020 
+% Created: 02-Sep-2020 ; Last revision: 07-Apr-2021 
 
 % ------------- BEGIN CODE --------------
 
-
+    if nargin < 6
+        id = 2; 
+    end
+    if nargin < 5
+        shootability = 0; 
+    end
+    
     if nargin < 4
         facealpha = 1;
     end
@@ -83,6 +89,9 @@ function XfigurePatch(fv, vertexcolors, map, facealpha)
     else
         xPatch.type.MultiVertexColorMesh = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
     end
+   
+    xPatch.shootability = uint32(shootability); 
+    xPatch.id = uint32(id);
     
     xFigureObject = evalin('base', "xFigureObject"); 
     xFigureObject{end+1} = xPatch; 

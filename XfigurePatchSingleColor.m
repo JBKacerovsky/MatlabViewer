@@ -1,4 +1,4 @@
-function XfigurePatchSingleColor(fv, color, facealpha)
+function XfigurePatchSingleColor(fv, color, facealpha, shootability, id)
 % XfigurePatch - adds a mesh object. the mesh object has one color
 %
 % Syntax:  
@@ -24,14 +24,21 @@ function XfigurePatchSingleColor(fv, color, facealpha)
 % Author: J. Benjamin Kacerovsky
 % Centre for Research in Neuroscience, McGill University
 % email: johannes.kacerovsky@mail.mcgill.ca
-% Created: 02-Sep-2020 ; Last revision: 02-Sep-2020 
+% Created: 02-Sep-2020 ; Last revision: 07-Apr-2021 
 
 % ------------- BEGIN CODE --------------
 
-
+    if nargin < 5
+        id = 2; 
+    end
+    if nargin < 4
+        shootability = 0; 
+    end
+    
     if nargin < 3
         facealpha = 1;
     end
+    
     if nargin < 2
         color = [0, 0, 0.99999];
     end
@@ -49,6 +56,8 @@ function XfigurePatchSingleColor(fv, color, facealpha)
     xPatch.color = intCheck(color); 
     xPatch.opacity = facealpha;
     
+    xPatch.shootability = uint32(shootability); 
+    xPatch.id = uint32(id);
     xPatch.type.SingleColorMesh = [];  % this is a bit of a silly workaround. The Accord reader I am using in unity does not allow me to have data fields of string type, but reads out fieldnames as strings. So I am using the fieldname of a struct with no data to pass in the string "type". seems silly but it works
     
     xFigureObject = evalin('base', "xFigureObject"); 
