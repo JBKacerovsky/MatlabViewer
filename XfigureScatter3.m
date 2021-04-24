@@ -11,7 +11,7 @@ function XfigureScatter3(scatterPoints, sphereSize, color, shootability, id)
 % Inputs:
 %    scatterPoints - Nx3 array of xyz location for points on the scatter
 %       plot (each row specifies x, y, z for 1 point)
-%    sphereSsize - scalar or Nx1 defining sphere size for each point
+%    sphereSize - scalar or Nx1 defining sphere size for each point
 %       Default = 50 for all points
 %    color - 1x3 RGB array, 
 %        if not specified color will default to [1, 0, 0] (red)
@@ -42,10 +42,11 @@ function XfigureScatter3(scatterPoints, sphereSize, color, shootability, id)
 
 % ------------- BEGIN CODE --------------
     if nargin < 5
-        id = zeros(1, size(scatterPoints, 2)); 
+        id = zeros(1, size(scatterPoints, 1)); 
     end
     if nargin < 4
-        shootability = twos(1, size(scatterPoints, 2)); 
+%         shootability = zeros(1, size(scatterPoints, 1)); 
+         shootability = 0; 
     end
     if nargin < 3
         color = [0.99999, 0, 0]; 
